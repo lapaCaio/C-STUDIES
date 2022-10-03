@@ -1,0 +1,29 @@
+analise de custo para melhorar a busca:
+ - melhor caso;
+ - pior caso;
+ - 
+
+ buscas:
+  1. sequancial (mais trivial, por exemplo "for");
+  2. binaria;
+    2.1 condição de aplicabilidade:
+      2.1.1 os dados tem que estar ordenados;
+
+l = 0;
+r = TAM - 1;
+
+while(l < r && v[m] != x){
+    m = (l + r)/2;
+    if(v[m] < x){
+        r = m - 1;
+    }else if(v[m] > x){
+        l = m + 1;
+    }
+}
+
+
+BUSCA EM CADEIA DE CARACTERES
+
+ALGORITMO DE FORÇA BRUTA
+
+USO DE CI/CD;
