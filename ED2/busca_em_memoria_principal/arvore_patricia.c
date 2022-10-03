@@ -90,10 +90,8 @@ int remove_pat2(NoPat** p, char[MAX]){
                 free(temp);
                 return 0;
             }
-        }
-        
-    }
-    
+        }   
+    }  
 }
 
 /*
