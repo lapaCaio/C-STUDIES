@@ -25,6 +25,7 @@ int main(int argv, char** argc){
     for(int i = 0; i < MAX; i++){
         printf("%d - ", vet[i]);
     }
+    
 
     return EXIT_SUCCESS;
 }
