@@ -21,6 +21,7 @@ void selection_sort(int vet[], int n){
                 printf("%d, ", vet[a]);
             }
             printf("\n");
+            
         }
     }
 }
