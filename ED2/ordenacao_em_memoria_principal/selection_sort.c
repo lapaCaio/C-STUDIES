@@ -12,16 +12,11 @@ void selection_sort(int vet[], int n){
             if(vet[menor] > vet[j]){
                 menor = j; //posição do menor valor do vetor
             }
-            if(i != menor){  //se a pos for diferente, troca 
-                aux = vet[i];
-                vet[i] = vet[menor];
-                vet[menor] = aux;
-            }
-            for(int a = 0; a < n; a++){
-                printf("%d, ", vet[a]);
-            }
-            printf("\n");
-            
+        }
+        if(i != menor){  //se a pos for diferente, troca 
+            aux = vet[i];
+            vet[i] = vet[menor];
+            vet[menor] = aux;
         }
     }
 }
