@@ -8,17 +8,17 @@ void shell_sort(int vet[], int tam){
     int h = 1;  //distância entre os elementos que serão comparados
 
     while(h < tam){
-        h = 3 * h + 1;
+        h = 3 * h + 1; //13
     }
     
-    while(h > 1){
-        h /= 3;
-        for(int i = h; i < tam; i++){
-            aux = vet[i];
-            j = i - h;
+    while(h > 1){ //13 maior q 1
+        h /= 3; //h = 1
+        for(int i = h; i < tam; i++){ //i = 3
+            aux = vet[i];  //aux = 1
+            j = i - h;  //j = 2
             while(j >= 0 && aux < vet[j]){
-                vet[j + h] = vet[j];
-                j -= h;
+                vet[j + h] = vet[j];  //troca de lugar
+                j -= h;  //?? 0
             }
             vet[j + h] = aux;
         }
