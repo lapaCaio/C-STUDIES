@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 8;
+#define MAX 8
 
 // tipo_no = 0 -> FOLHA
 //tipo_no = 1 -> INTERMEDIÁRIO (TRATAR PRIMEIRO);
