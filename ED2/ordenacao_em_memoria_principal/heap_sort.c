@@ -5,9 +5,9 @@
 
 void cria_heap(int vet[], int i, int f){
     int aux = vet[i];
-    int j = i * 2 + 1;
+    int j = i * 2 + 1; 
 
-    while(j <= f){
+    while(j <= f){ 
         if(j < f){
             if(vet[j] < vet[j + 1]){  //pai tem dois filhos? quem é o maior?
                 j = j + 1;
@@ -28,7 +28,7 @@ void heap_sort(int vet[], int tam){
     int i, aux;
 
     for(i = (tam - 1)/2; i >= 0; i--){  //cria heap a partir dos dados
-        cria_heap(vet, i, tam - 1);
+        cria_heap(vet, i, tam - 1); 
     }
 
     for(i = tam - 1; i >= 1; i--){
