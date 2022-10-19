@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 9
+#define MAX 7
 
 int particiona(int vet[], int inicio, int final){
     int esq, dir, pivo, aux;
@@ -39,7 +39,7 @@ void quick_sort(int vet[], int inicio, int fim){
 
 int main(int argv, char** argc){
     
-    int vet[MAX] = {3,6,5,1,2,8,7,9,4};
+    int vet[MAX] = {2, 4, 1, 6, 3, 7, 5};
 
 
     quick_sort(vet, 0, MAX - 1);
