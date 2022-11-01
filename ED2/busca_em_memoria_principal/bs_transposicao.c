@@ -4,7 +4,7 @@
 #define MAX 10
 
 
-int bs_mover_para_frente(int *V, int n,int key){
+int bs_transposicao(int *V, int n,int key){
     int aux = 1, temp;
     for(int i = 0; i < n; i++){
         if(V[i] == key){
@@ -29,7 +29,7 @@ int main(int argv, char** argc){
 
     printf("\n");
     
-    bs_mover_para_frente(vet, MAX, 9);
+    bs_transposicao(vet, MAX, 9);
 
     for (int i = 0; i < MAX; i++){
         printf("%d - ", vet[i]);
