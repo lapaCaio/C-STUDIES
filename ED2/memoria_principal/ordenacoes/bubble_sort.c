@@ -5,32 +5,32 @@
 //PIOR CASO: ordem inversa
 
 
-void bubble_sort(int vet[MAX]){  //implementação clássica
-    int cont = 0;
-    int cont_trocas = 1; //contar quantas trocas fez...
 
-    while(cont_trocas != 0){
-        cont_trocas = 0;
 
-        for(int i = (MAX - 1); i >= 1; i--){
-            if(vet[i - 1] >= vet[i]){
-
-                int temp = vet[i - 1];
-                vet[i - 1] = vet[i];
-                vet[i] = temp; 
-                cont++;
-                cont_trocas++;
+void bubble_sort(int *V, int vtam){
+    int aux;
+    
+    for(int i = vtam; i >= 1; i--){ //percorre o vetor de tras pra frente
+        for(int j = 0; j < i; j++){  //percorre o vetor normalmente para realizar as trocas
+            if(V[j] > V[j + 1]){  //se 
+                aux = V[j];
+                V[j] = V[j + 1];
+                V[j + 1] = aux;
             }
-        } 
+
+        }
     }
-   printf("\n Número de trocas: %d", cont);
 }
 
 
 int main(int argv, char** argc){
 
     int vet[MAX] = {1,9,2,6,8};
-    bubble_sort(vet);
+    bubble_sort(vet, MAX - 1);
+
+    for (int i = 0; i < MAX; i++){
+        printf("%d - ", vet[i]);
+    }
 
 
     return EXIT_SUCCESS;
