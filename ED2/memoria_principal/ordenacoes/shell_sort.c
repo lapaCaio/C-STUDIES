@@ -6,24 +6,19 @@
 
 void shell_sort(int *V, int tam){
     int j, aux;
-    int h = 1;  //distância entre os elementos que serão comparados
-
+    int h = 1;
     while(h < tam){
-        h = (3 * h) + 1;  //h = 13
+        h = (3 * h) + 1;  
     }
-    
     while(h > 1){ 
-        h /= 3; //h = 1
-
-        for(int i = h; i < tam; i++){ //i = 3
-            aux = V[i];  //aux = 1
-            j = i - h;  //j = -1
-
+        h /= 3; 
+        for(int i = h; i < tam; i++){ 
+            aux = V[i]; 
+            j = i - h; 
             while(j >= 0 && aux < V[j]){
                 V[j + h] = V[j];  
                 j -= h;  
             }
-
             V[j + h] = aux;
         }
     }
