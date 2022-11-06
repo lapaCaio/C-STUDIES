@@ -17,7 +17,6 @@ void bubble_sort(int *V, int vtam){
                 V[j] = V[j + 1];
                 V[j + 1] = aux;
             }
-
         }
     }
 }

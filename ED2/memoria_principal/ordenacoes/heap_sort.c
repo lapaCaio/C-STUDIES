@@ -3,39 +3,39 @@
 
 #define MAX 9
 
-void cria_heap(int vet[], int i, int f){
-    int aux = vet[i];
+void cria_heap(int *V, int i, int f){
+    int aux = V[i];
     int j = i * 2 + 1; 
 
     while(j <= f){ 
-        if(j < f){
-            if(vet[j] < vet[j + 1]){  //pai tem dois filhos? quem é o maior?
+        if(j < f){  //pai tem dois filhos?
+            if(V[j] < V[j + 1]){  //quem é o maior?
                 j = j + 1;
             }
         }
-        if(aux < vet[j]){  //filho maior que o pai? filho se torna o pai! repetir o processo...
-            vet[i] = vet[j];
+        if(aux < V[j]){  //filho maior que o pai? filho se torna o pai! repetir o processo...
+            V[i] = V[j];
             i = j;
-            j = 2 * i + 1;
+            j = (2 * i) + 1;
         }else{
             j = f + 1;
         }
     }
-    vet[i] = aux;  //antigo pai ocupa o lugar do último filho analisado
+    V[i] = aux;  //antigo pai ocupa o lugar do último filho analisado
 }
 
-void heap_sort(int vet[], int tam){
+void heap_sort(int *V, int tam){
     int i, aux;
 
     for(i = (tam - 1)/2; i >= 0; i--){  //cria heap a partir dos dados
-        cria_heap(vet, i, tam - 1); 
+        cria_heap(V, i, tam - 1); 
     }
 
     for(i = tam - 1; i >= 1; i--){
-        aux = vet[0];  //pega o maior elemento da heap e colocar na sua posição correspondente  no array
-        vet[0] = vet[i];
-        vet[i] = aux;
-        cria_heap(vet, 0, i - 1);  //reconstruir heap
+        aux = V[0];  //pega o maior elemento da heap e colocar na sua posição correspondente  no array
+        V[0] = V[i];
+        V[i] = aux;
+        cria_heap(V, 0, i - 1);  //reconstruir heap
     }
 }
 

@@ -14,8 +14,8 @@ void merge(int *V, int inicio, int meio, int fim){
 
     temp = (int *)malloc(tamanho * sizeof(int));
 
-    if (temp != NULL){
-        for (i = 0; i < tamanho; i++){
+    if (temp){  //verifica se o vetor temp existe
+        for (i = 0; i < tamanho; i++){  
             if (!fim1 && !fim2){
                 if (V[p1] < V[p2]){
                     temp[i] = V[p1++];
@@ -36,7 +36,7 @@ void merge(int *V, int inicio, int meio, int fim){
                 }
             }
         }
-        for (j = 0, k = inicio; j < tamanho; j++, k++){
+        for (j = 0, k = inicio; j < tamanho; j++, k++){  // apenas pega os dados do vetor temporário e joga no vetor principal 
             V[k] = temp[j];
         }       
     }
@@ -46,14 +46,15 @@ void merge(int *V, int inicio, int meio, int fim){
 void merge_sort(int *V, int inicio, int fim){
     int meio;
     if (inicio < fim){
-        meio = floor((inicio + fim) / 2);
+        meio = (inicio + fim)/2;
         merge_sort(V, inicio, meio);
         merge_sort(V, meio + 1, fim);
-        merge(V, inicio, meio, fim);
+
+        merge(V, inicio, meio, fim);  //apenas intercala 
     }
 }
 
-int main(int argv, char **argsc)
+int main(int argv, char **argc)
 {
 
     int vet[MAX] = {3, 6, 5, 1, 2, 8, 7, 9, 4};
