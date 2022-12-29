@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX 10
+
 int main(int argv, char** argc){
 
     int vet[MAX] = {1,9,2,6,8};
@@ -9,7 +11,6 @@ int main(int argv, char** argc){
     for (int i = 0; i < MAX; i++){
         printf("%d - ", vet[i]);
     }
-
 
     return EXIT_SUCCESS;
 }

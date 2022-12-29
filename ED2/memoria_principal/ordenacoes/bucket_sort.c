@@ -3,19 +3,6 @@
 
 #define TAM 5  //tamanho do balde
 
-void bubble_sort(int *V, int tam){
-
-    for(int i = tam; i > 0; i--){
-        for(int j = 0; j < i; j++){
-            if(V[j] > V[j + 1]){ 
-                int aux = V[j];
-                V[j] = V[j + 1];
-                V[j + 1] = aux;
-            }
-        }
-    }  
-}
-
 //=========================================================================================
 
 typedef struct balde{
@@ -88,5 +75,5 @@ int main(int argc, char** argv){
         printf("%d - ", vetII[i]);
     }
 
-    return EXIT_SUCCESS;
+    return EXIT_SUCCESS;  //
 }
