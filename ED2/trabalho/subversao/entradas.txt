@@ -1,0 +1,4 @@
+Caio Lapa	1	Ciências da Computação
+	2 
+Thiago Berguer	2	Ciências da Computação
+	1 
